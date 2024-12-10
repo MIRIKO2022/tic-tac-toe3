@@ -106,6 +106,7 @@ void showMinimax(char *spaces, char computer, char player)
             int score = minimax(spaces, false, player, computer);
             spaces[i] = '1' + i;
             cout << "Move at position " << i + 1 << " has score: " << score << '\n';
+            Sleep(1000);
         }
     }
     cout << '\n';
@@ -132,6 +133,7 @@ void computerMove(char *spaces, char computer, char player)
     }
     spaces[bestMove] = computer;
     cout << "Computer places marker at position " << bestMove + 1 << " with evaluation score: " << bestScore << '\n';
+    Sleep(1000);
 }
 
 int minimax(char *spaces, bool isMaximizing, char player, char computer)
