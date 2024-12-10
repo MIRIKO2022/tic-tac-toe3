@@ -1,5 +1,6 @@
 #include <iostream>
 #include <ctime>
+#include <limits>
 #include <windows.h>
 using namespace std;
 
@@ -90,7 +91,9 @@ void playerMove(char *spaces, char player)
         }
         else
         {
-            cout << "Invalid move. Try again.\n";
+            cout << "Invalid move. Try again.Please enter a number between 1 and 9.\n";
+            cin.clear();                                         
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
         }
     } while (true);
 }
